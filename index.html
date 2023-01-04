@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS For Loop Day2</title>
+        <script>
+            // I can write js code before the clossing of head tag
+        </script>
+    </head>
+
+    <body>
+        <h1 class="data"></h1>
+        <script>
+            // I can write js code before the clossing of body tag
+            let student1 = {
+                name: "Pratiksha", // Data type-string
+                surname: "Prajapati", // string
+                address: "Neemuch", // string
+                contact: 8817258677, // Number
+                friends: ["prakriti", "yukti", "kratika", "vanshika", "Apurva"], // Array
+            };
+
+            // {}   = JS object
+            //[]  = Js Array
+            // . = Member Selection operator
+            // now we will learn for in loop
+
+            /*
+            the syntax of  for- in- loop
+            for (key in object) {
+            // code block to be executed
+            }
+            */
+            // key = property
+            for (x in student1) {
+                /*
+                1 way- objectName.property    this will not work in for in loop
+                */
+
+                console.log(student1[`${x}`]); // 2-way objectName["property"]   // person["age"]
+                console.log(student1[x]); // 3- way objectName[expression]   // x = "age"; person[x]
+                alert(student1[`${x}`]);
+            }
+        </script>
+        <script>
+            /*
+            Syntax of   for -of loop
+                for (variable of iterable) {
+                // code block to be executed
+                }
+            */
+            const myname = "Sampat Prajapati";
+
+            for (text of myname) {
+                console.log(text);
+            }
+        </script>
+        <script>
+            let friends = [
+                "Bhavna" +
+                    " " +
+                    "Anjali" +
+                    " " +
+                    "Saloni" +
+                    " " +
+                    "Sakshi" +
+                    " " +
+                    `Payal` +
+                    " " +
+                    "Ranu" +
+                    " " +
+                    "Shanu" +
+                    " " +
+                    "Nikita" +
+                    " " +
+                    `Neha`,
+            ]; // [] this sign js we called is an Array
+            for (friend of friends) {
+                console.log(friend);
+                document.write(friend);
+            }
+        </script>
+    </body>
+</html>
